@@ -20,10 +20,14 @@ To visualize the output graphically, run the following command using the graph.p
 <br />
 Make sure to replace DATOS/data_to_graph.csv with the actual path to the CSV file containing the data you want to graph.
 
-# GPIO Conections 
-VCC --> Pin 1 (3.3V)<br />
-GND --> Pin 6 (GND) <br />
-DS18B20 --> Pin 7 (GPIO 4) <br />
+# GPIO Connections 
+In case of any disconnection with the Raspberry, follow this table:
+|DS18B20| Raspberry Pi |
+|--|--|
+| (Red Cable) VCC | Pin 1 (3.3V) |
+| (Grey Cable) GND| Pin 6 (GND) |
+| (Orange Cable) Data| Pin 7 (GPIO 4) |
+
 # Reference Documentation
 1.  **DS18B20 Temperature Sensor Documentation:**
     
