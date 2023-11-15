@@ -15,6 +15,7 @@ To stop reading and writing, press `Ctrl + C`. The data will be uploaded to the 
 
 To visualize the output graphically, run the following command using the graph.py script:
 `python graph.py DATOS/data_to_graph.csv`
+
 Make sure to replace DATOS/data_to_graph.csv with the actual path to the CSV file containing the data you want to graph.
 
 # GPIO Conections 
