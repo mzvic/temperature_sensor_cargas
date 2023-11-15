@@ -13,6 +13,10 @@ It will asks for the date and hour, then it shows and output with this format:
 
 To stop reading and writing, press `Ctrl + C`. The data will be uploaded to the [DATOS](https://github.com/mzvic/temperature_sensor_cargas/tree/main/DATOS) folder.
 
+To visualize the output graphically, run the following command using the graph.py script:
+`python graph.py DATOS/data_to_graph.csv`
+Make sure to replace DATOS/data_to_graph.csv with the actual path to the CSV file containing the data you want to graph.
+
 # GPIO Conections 
 VCC --> Pin 1 (3.3V)
 GND --> Pin 6 (GND)
