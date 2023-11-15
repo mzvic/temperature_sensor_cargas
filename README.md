@@ -2,6 +2,7 @@
 This code is specifically crafted for the CARGAS LLAMA project. It is designed to interface with two DS18B20 sensors connected to a Raspberry Pi 4. The program provides real-time readings of date, time, and temperatures from the sensors. Additionally, the output is saved in a CSV file named with the corresponding date and time.
 
 #  Usage (Laboratory Setting)
+Make sure to connect to the same Wifi that the Raspberry is connected (Cepia_work_5). <br />
 Connect to the Raspberry Pi through SSH using the following command:
 `ssh raspy@192.168.0.118`
 The pasword is: `raspy`
@@ -19,9 +20,9 @@ To visualize the output graphically, run the following command using the graph.p
 Make sure to replace DATOS/data_to_graph.csv with the actual path to the CSV file containing the data you want to graph.
 
 # GPIO Conections 
-VCC --> Pin 1 (3.3V)
-GND --> Pin 6 (GND)
-DS18B20 --> Pin 7 (GPIO 4)
+VCC --> Pin 1 (3.3V)<br />
+GND --> Pin 6 (GND) <br />
+DS18B20 --> Pin 7 (GPIO 4) <br />
 # Reference Documentation
 1.  **DS18B20 Temperature Sensor Documentation:**
     
