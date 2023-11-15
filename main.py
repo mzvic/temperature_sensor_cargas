@@ -6,11 +6,14 @@ import time
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
 
-start_time = datetime.now()
+import os
+from datetime import datetime
+
+start_time = datetime.now().isoformat()
 
 def push():
     os.system("git add --all")
-    os.system("git commit -m {}".format(str(start_time)))
+    os.system('git commit -m "{}"'.format(start_time))
     os.system("git push")
 
 print("------------------------------")
