@@ -10,7 +10,7 @@ start_time = datetime.now()
 
 def push():
     os.system("git add --all")
-    os.system("git commit -m " + str(start_time))
+    os.system("git commit -m {}".format(str(start_time)))
     os.system("git push")
 
 print("------------------------------")
