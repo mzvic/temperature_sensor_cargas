@@ -5,4 +5,4 @@ read fecha_usr hora_usr
 
 sudo date -s "${fecha_usr} ${hora_usr}"
 
-python main2.py
+python main.py
