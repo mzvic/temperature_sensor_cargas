@@ -6,7 +6,7 @@ This code is specifically crafted for the CARGAS LLAMA project. It is designed t
 Make sure to connect to the same Wifi that the Raspberry is connected (Cepia_work_5). <br />
 <br />
 Connect to the Raspberry Pi through SSH using the following command:
-`ssh raspy@192.168.0.100`
+`ssh raspy@192.168.0.113`
 The pasword is: `raspy`
 
 Execute the script:
