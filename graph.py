@@ -25,8 +25,8 @@ def plot_csv(filename):
     # Plot the data
     plt.figure(figsize=(10, 6))
 
-    plt.plot(timestamps, values1, label='DS18B20')
-    plt.plot(timestamps, values2, label='DS18B20_1')
+    plt.plot(timestamps, values1, label='Ambiente')
+    plt.plot(timestamps, values2, label='Cargas')
 
     plt.xlabel('Timestamp')
     plt.ylabel('Temperature (°C)')
