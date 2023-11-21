@@ -16,9 +16,6 @@ def push():
     os.system('git commit -m "{}"'.format(start_time))
     os.system("git push")
 
-
-
-
 print("------------------------------")
 with open("./DATOS/" + str(start_time) + ".csv", 'w') as f:
     while True:
@@ -30,6 +27,7 @@ with open("./DATOS/" + str(start_time) + ".csv", 'w') as f:
             f.write("{}, {}, {}\n".format(time_now, str(ds18b20), str(ds18b20_1)))
             print("------------------------------")
         except KeyboardInterrupt:
+            print()
             print("Nombre archivo: " + str(start_time))
             f.close()
             push()
