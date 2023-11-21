@@ -32,6 +32,10 @@ In case of any disconnection with the Raspberry, follow this table:
 
 [Example of connection](https://imgur.com/a/WS1oDGb.jpeg)
 
+# Dependencies
+- buscar_rpi.py requires: ping3, paramiko (pip install ping3 paramiko)
+- graph.py requires: matplotlib (pip install matplotlib)
+
 # Reference Documentation
 1.  **DS18B20 Temperature Sensor Documentation:**
     
