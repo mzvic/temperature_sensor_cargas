@@ -16,16 +16,10 @@ def push():
     os.system('git commit -m "{}"'.format(start_time))
     os.system("git push")
 
+
+
+
 print("------------------------------")
-import signal
-
-def handler(signum, frame):
-    print('Ctrl+Z pressed, but ignored')
-
-signal.signal(signal.SIGTSTP, handler)
-
-while True:
-    pass
 with open("./DATOS/" + str(start_time) + ".csv", 'w') as f:
     while True:
         try:
