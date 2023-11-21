@@ -13,7 +13,7 @@ def ping_and_ssh(start_ip, end_ip, ssh_username, ssh_password):
         # Ping
         response = ping(ip_str, timeout=1)
         if response is not None:
-            #print(f"{ip_str} is reachable (Round-trip time: {response} ms)")
+            print(f"{ip_str} is reachable (Round-trip time: {response} ms)")
 
             # Attempt SSH connection
             try:
