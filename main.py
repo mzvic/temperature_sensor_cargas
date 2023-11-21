@@ -17,7 +17,12 @@ def push():
     os.system("git push")
 
 print("------------------------------")
+import signal
 
+def handler(signum, frame):
+    print 'Ctrl+Z pressed, but ignored'
+
+signal.signal(signal.SIGTSTP, handler)
 with open("./DATOS/" + str(start_time) + ".csv", 'w') as f:
     while True:
         try:
