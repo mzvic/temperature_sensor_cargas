@@ -25,8 +25,8 @@ with open("./DATOS/" + str(start_time_name) + ".csv", 'w') as f:
             ds18b20_1 = read_temp1()
             time_now = datetime.now()
             
-            print("{}, DS18B20: {}, DS18B20_1: {}".format(time_now.time(), str(ds18b20), str(ds18b20_1)))
-            f.write("{}, {}, {}\n".format(time_now.time(), str(ds18b20), str(ds18b20_1)))
+            print("{}, {}, DS18B20: {}, DS18B20_1: {}".format(time_now.time(), str(datetime.now() - start_time), str(ds18b20), str(ds18b20_1)))
+            f.write("{}, {}, {}, {}\n".format(time_now.time(), str(datetime.now() - start_time), str(ds18b20), str(ds18b20_1)))
             print("------------------------------")
         except KeyboardInterrupt:
             print()
