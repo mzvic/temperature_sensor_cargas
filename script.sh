@@ -1,8 +1,18 @@
 #!/bin/bash
+echo "La fecha actual es: $(date)"
 
-echo Introduce fecha y hora yyy-mm-dd hh:mm:ss
-read fecha_usr hora_usr
+read -p "Deseas cambiarla? (s/n): " input
 
-sudo date -s "${fecha_usr} ${hora_usr}"
+if [ "$input" = "s" ]; then
+   echo "Introduce Fecha y Hora (yyyy-mm-dd hh:mm:ss)"
+   read -p "Fecha: " fecha_usr
+   read -p "Hora: " hora_usr
+   sudo date -s "${fecha_usr} ${hora_usr}"
+   python main.py
+elif [ "$input" = "n" ]; then
+   echo "Ejecutando python main.py..."
+   python main.py
+else
+   echo "Opción no válida. Por favor, selecciona 's' o 'n'."
+fi
 
-python main.py
