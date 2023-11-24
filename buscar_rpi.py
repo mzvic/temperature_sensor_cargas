@@ -28,6 +28,7 @@ def ping_and_ssh(start_ip, end_ip, ssh_username, ssh_password):
 
                 print(f"La Raspberry está ubicada en: {ip_str}")
                 ssh.close()
+                return ip_str
                 quit()
             except paramiko.AuthenticationException:
                 print(f"Authentication failed for {ip_str}")
