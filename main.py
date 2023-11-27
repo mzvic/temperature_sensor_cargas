@@ -6,13 +6,10 @@ import time
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
 
-import os
-from datetime import datetime
-
-start_time_name = datetime.now().isoformat()
+safe_start_time = datetime.now().isoformat()
 start_time = datetime.now()
 
-def push():
+def push(start_time_name):
     os.system("git add --all")
     os.system('git commit -m "{}"'.format(start_time_name))
     os.system("git push")
@@ -32,5 +29,5 @@ with open("./DATOS/" + str(start_time_name) + ".csv", 'w') as f:
             print()
             print("Nombre archivo: " + str(start_time))
             f.close()
-            push()
+            push(safe_start_time)
             break

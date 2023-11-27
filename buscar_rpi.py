@@ -11,9 +11,10 @@ def ping_and_ssh(start_ip, end_ip, ssh_username, ssh_password):
         ip_str = str(current_ip)
 
         # Ping
+        print("Intentando con {}".format(ip_str), end="\r")
         response = ping(ip_str, timeout=1)
         if response is not None:
-            print(f"{ip_str} is reachable (Round-trip time: {response} ms)")
+            #print(f"{ip_str} is reachable (Round-trip time: {response} ms)")
 
             # Attempt SSH connection
             try:
@@ -26,15 +27,18 @@ def ping_and_ssh(start_ip, end_ip, ssh_username, ssh_password):
 
                 # Perform any actions you need with the SSH connection here
 
-                print(f"La Raspberry está ubicada en: {ip_str}")
+                print("Conexión exitosa en: {}".format(ip_str))
                 ssh.close()
-                quit()
+                return ip_str
             except paramiko.AuthenticationException:
-                print(f"Authentication failed for {ip_str}")
+                #print(f"Authentication failed for {ip_str}")
+                pass
             except paramiko.SSHException as e:
-                print(f"Unable to establish SSH connection to {ip_str}: {str(e)}")
+                #print(f"Unable to establish SSH connection to {ip_str}: {str(e)}")
+                pass
             except Exception as e:
-                print(f"Error connecting to {ip_str}: {str(e)}")
+                #print(f"Error connecting to {ip_str}: {str(e)}")
+                pass
         else:
             #print(f"{ip_str} is not reachable")
             pass
