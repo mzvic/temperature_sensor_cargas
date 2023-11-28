@@ -15,7 +15,7 @@ def push(start_time_name):
     os.system("git push")
 
 print("------------------------------")
-with open("./DATOS/" + str(start_time_name) + ".csv", 'w') as f:
+with open("./DATOS/" + str(safe_start_time) + ".csv", 'w') as f:
     while True:
         try:
             ds18b20 = read_temp()
